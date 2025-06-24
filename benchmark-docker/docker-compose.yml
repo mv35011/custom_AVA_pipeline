@@ -1,0 +1,17 @@
+version: "3"
+services:
+  mmaction:
+    build: .
+    runtime: nvidia
+    image: mmaction2-mvit
+    container_name: mmaction2-container
+    volumes:
+      - ./data:/mmaction2/data  # Mount your dataset here
+      - ./work_dirs:/mmaction2/work_dirs
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]

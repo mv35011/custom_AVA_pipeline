@@ -1,0 +1,200 @@
+item {
+  name: "normal_walk"
+  id: 0
+}
+item {
+  name: "fast_walk"
+  id: 1
+}
+item {
+  name: "slow_walk"
+  id: 2
+}
+item {
+  name: "standing_still"
+  id: 3
+}
+item {
+  name: "jogging"
+  id: 4
+}
+item {
+  name: "window_shopping"
+  id: 5
+}
+item {
+  name: "no_phone"
+  id: 6
+}
+item {
+  name: "talking_phone"
+  id: 7
+}
+item {
+  name: "texting"
+  id: 8
+}
+item {
+  name: "taking_photo"
+  id: 9
+}
+item {
+  name: "listening_music"
+  id: 10
+}
+item {
+  name: "alone"
+  id: 11
+}
+item {
+  name: "talking_companion"
+  id: 12
+}
+item {
+  name: "group_walking"
+  id: 13
+}
+item {
+  name: "greeting_someone"
+  id: 14
+}
+item {
+  name: "asking_directions"
+  id: 15
+}
+item {
+  name: "avoiding_crowd"
+  id: 16
+}
+item {
+  name: "empty_hands"
+  id: 17
+}
+item {
+  name: "shopping_bags"
+  id: 18
+}
+item {
+  name: "backpack"
+  id: 19
+}
+item {
+  name: "briefcase_bag"
+  id: 20
+}
+item {
+  name: "umbrella"
+  id: 21
+}
+item {
+  name: "food_drink"
+  id: 22
+}
+item {
+  name: "multiple_items"
+  id: 23
+}
+item {
+  name: "sidewalk_walking"
+  id: 24
+}
+item {
+  name: "crossing_street"
+  id: 25
+}
+item {
+  name: "waiting_signal"
+  id: 26
+}
+item {
+  name: "looking_around"
+  id: 27
+}
+item {
+  name: "checking_map"
+  id: 28
+}
+item {
+  name: "entering_building"
+  id: 29
+}
+item {
+  name: "exiting_building"
+  id: 30
+}
+item {
+  name: "upright_normal"
+  id: 31
+}
+item {
+  name: "looking_down"
+  id: 32
+}
+item {
+  name: "looking_up"
+  id: 33
+}
+item {
+  name: "hands_in_pockets"
+  id: 34
+}
+item {
+  name: "arms_crossed"
+  id: 35
+}
+item {
+  name: "pointing_gesture"
+  id: 36
+}
+item {
+  name: "bowing_gesture"
+  id: 37
+}
+item {
+  name: "business_attire"
+  id: 38
+}
+item {
+  name: "casual_wear"
+  id: 39
+}
+item {
+  name: "tourist_style"
+  id: 40
+}
+item {
+  name: "school_uniform"
+  id: 41
+}
+item {
+  name: "sports_wear"
+  id: 42
+}
+item {
+  name: "traditional_wear"
+  id: 43
+}
+item {
+  name: "rush_hour"
+  id: 44
+}
+item {
+  name: "leisure_time"
+  id: 45
+}
+item {
+  name: "shopping_time"
+  id: 46
+}
+item {
+  name: "tourist_hours"
+  id: 47
+}
+item {
+  name: "lunch_break"
+  id: 48
+}
+item {
+  name: "evening_stroll"
+  id: 49
+}

@@ -1,0 +1,57 @@
+item { id: 1 name: "walking_behavior:normal_walk" }
+item { id: 2 name: "walking_behavior:fast_walk" }
+item { id: 3 name: "walking_behavior:slow_walk" }
+item { id: 4 name: "walking_behavior:standing_still" }
+item { id: 5 name: "walking_behavior:jogging" }
+item { id: 6 name: "walking_behavior:window_shopping" }
+
+item { id: 101 name: "phone_usage:no_phone" }
+item { id: 102 name: "phone_usage:talking_phone" }
+item { id: 103 name: "phone_usage:texting" }
+item { id: 104 name: "phone_usage:taking_photo" }
+item { id: 105 name: "phone_usage:listening_music" }
+
+item { id: 201 name: "social_interaction:alone" }
+item { id: 202 name: "social_interaction:talking_companion" }
+item { id: 203 name: "social_interaction:group_walking" }
+item { id: 204 name: "social_interaction:greeting_someone" }
+item { id: 205 name: "social_interaction:asking_directions" }
+item { id: 206 name: "social_interaction:avoiding_crowd" }
+
+item { id: 301 name: "carrying_items:empty_hands" }
+item { id: 302 name: "carrying_items:shopping_bags" }
+item { id: 303 name: "carrying_items:backpack" }
+item { id: 304 name: "carrying_items:briefcase_bag" }
+item { id: 305 name: "carrying_items:umbrella" }
+item { id: 306 name: "carrying_items:food_drink" }
+item { id: 307 name: "carrying_items:multiple_items" }
+
+item { id: 401 name: "street_behavior:sidewalk_walking" }
+item { id: 402 name: "street_behavior:crossing_street" }
+item { id: 403 name: "street_behavior:waiting_signal" }
+item { id: 404 name: "street_behavior:looking_around" }
+item { id: 405 name: "street_behavior:checking_map" }
+item { id: 406 name: "street_behavior:entering_building" }
+item { id: 407 name: "street_behavior:exiting_building" }
+
+item { id: 501 name: "posture_gesture:upright_normal" }
+item { id: 502 name: "posture_gesture:looking_down" }
+item { id: 503 name: "posture_gesture:looking_up" }
+item { id: 504 name: "posture_gesture:hands_in_pockets" }
+item { id: 505 name: "posture_gesture:arms_crossed" }
+item { id: 506 name: "posture_gesture:pointing_gesture" }
+item { id: 507 name: "posture_gesture:bowing_gesture" }
+
+item { id: 601 name: "clothing_style:business_attire" }
+item { id: 602 name: "clothing_style:casual_wear" }
+item { id: 603 name: "clothing_style:tourist_style" }
+item { id: 604 name: "clothing_style:school_uniform" }
+item { id: 605 name: "clothing_style:sports_wear" }
+item { id: 606 name: "clothing_style:traditional_wear" }
+
+item { id: 701 name: "time_context:rush_hour" }
+item { id: 702 name: "time_context:leisure_time" }
+item { id: 703 name: "time_context:shopping_time" }
+item { id: 704 name: "time_context:tourist_hours" }
+item { id: 705 name: "time_context:lunch_break" }
+item { id: 706 name: "time_context:evening_stroll" }
