@@ -151,6 +151,7 @@ Prepare annotations for VIA3 (VGG Image Annotator):
 ```bash
 cd ../yolovDeepsort/mywork/
 python dense_proposals_train_to_via.py ./dense_proposals_train.pkl ../../Dataset/choose_frames_middle/
+python chang_via_json.py 
 ```
 
 **What it does:**
@@ -172,7 +173,44 @@ python dense_proposals_train_to_via.py ./dense_proposals_train.pkl ../../Dataset
 cd ../../Dataset
 python json_extract.py
 ```
+Cumulative Action ID Logic
+The action IDs in the CSV files use a cumulative mapping system that converts your organized action categories into sequential IDs for training purposes.
+How It Works:
 
+Original Action Structure: Your actions are organized in categories with specific ID ranges:
+
+Walking Behavior: 10-15 (6 actions)
+Phone Usage: 20-24 (5 actions)
+Social Interaction: 30-35 (6 actions)
+Carrying Items: 40-46 (7 actions)
+Street Behavior: 50-56 (7 actions)
+Posture Gesture: 60-66 (7 actions)
+Clothing Style: 70-75 (6 actions)
+Time Context: 80-85 (6 actions)
+
+
+Cumulative Mapping Process:
+attribute_nums = [0, 6, 11, 17, 24, 31, 38, 44, 50]
+
+For each action:
+action_id = attribute_nums[category_index] + option_index + 1
+
+Example Mapping:
+
+normal_walk (category 1, option 0) → action_id = 0 + 0 + 1 = 1
+fast_walk (category 1, option 1) → action_id = 0 + 1 + 1 = 2
+no_phone (category 2, option 0) → action_id = 6 + 0 + 1 = 7
+talking_phone (category 2, option 1) → action_id = 6 + 1 + 1 = 8
+
+
+Result: Sequential action IDs (1, 2, 3, 4, 5, 6, 7, 8, 9, ...) that maintain category relationships while being compatible with standard ML frameworks.
+
+Why Use Cumulative IDs?
+
+Framework Compatibility: Most ML frameworks expect sequential class IDs starting from 0 or 1
+Memory Efficiency: Avoids sparse arrays when using original IDs like 10, 20, 30, etc.
+Category Preservation: Actions from the same category remain grouped together
+Scalability: Easy to add new action categories without ID conflicts
 **What it does:**
 - Reads VIA3 `_finish.json` files
 - Extracts bounding box coordinates and attributes
@@ -195,6 +233,9 @@ wget https://drive.google.com/drive/folders/1xhG0kRH1EX5B9_Iz8gQJb7UNnn_riXi6 -O
 
 Run tracking:
 ```bash
+cd mywork
+python dense_proposals_train_deepsort.py ../yolov5/runs/detect/exp/labels ./dense_proposals_train_deepsort.pkl show
+cd ../
 python yolov5_to_deepsort.py --source "../Dataset/frames"
 ```
 
@@ -203,12 +244,13 @@ python yolov5_to_deepsort.py --source "../Dataset/frames"
 ```bash
 cd ../Dataset
 python train_temp.py
+python train.py
 ```
 
 **What it does:**
 - Fuses person ID and non-person ID datasets
 - Creates final training dataset structure
-
+- train.py removes the data with person ID -1 and saves it as train.csv at annotations
 ### Step 12: Create Annotation Files
 
 Navigate to annotations directory and create required files:
@@ -216,7 +258,11 @@ Navigate to annotations directory and create required files:
 ```bash
 cd annotations
 ```
+```bash
+New-Item included_timestamps.txt -ItemType File
 
+New-Item action_list.pbtxt -ItemType File
+```
 Create `included_timestamps.txt`:
 ```
 02
@@ -227,208 +273,227 @@ Create `included_timestamps.txt`:
 07
 08
 ```
+```bash
+New-Item train_excluded_timestamps.csv -ItemType File
+```
 
 Create `action_list.pbtxt` with your action definitions.
+we have flexibility here we can add and change the configs for benchmark later
 ```
+# Walking Behavior Actions (1x series)
 item {
   name: "normal_walk"
-  id: 0
-}
-item {
-  name: "fast_walk"
-  id: 1
-}
-item {
-  name: "slow_walk"
-  id: 2
-}
-item {
-  name: "standing_still"
-  id: 3
-}
-item {
-  name: "jogging"
-  id: 4
-}
-item {
-  name: "window_shopping"
-  id: 5
-}
-item {
-  name: "no_phone"
-  id: 6
-}
-item {
-  name: "talking_phone"
-  id: 7
-}
-item {
-  name: "texting"
-  id: 8
-}
-item {
-  name: "taking_photo"
-  id: 9
-}
-item {
-  name: "listening_music"
   id: 10
 }
 item {
-  name: "alone"
+  name: "fast_walk"
   id: 11
 }
 item {
-  name: "talking_companion"
+  name: "slow_walk"
   id: 12
 }
 item {
-  name: "group_walking"
+  name: "standing_still"
   id: 13
 }
 item {
-  name: "greeting_someone"
+  name: "jogging"
   id: 14
 }
 item {
-  name: "asking_directions"
+  name: "window_shopping"
   id: 15
 }
+
+# Phone Usage Actions (2x series)
 item {
-  name: "avoiding_crowd"
-  id: 16
-}
-item {
-  name: "empty_hands"
-  id: 17
-}
-item {
-  name: "shopping_bags"
-  id: 18
-}
-item {
-  name: "backpack"
-  id: 19
-}
-item {
-  name: "briefcase_bag"
+  name: "no_phone"
   id: 20
 }
 item {
-  name: "umbrella"
+  name: "talking_phone"
   id: 21
 }
 item {
-  name: "food_drink"
+  name: "texting"
   id: 22
 }
 item {
-  name: "multiple_items"
+  name: "taking_photo"
   id: 23
 }
 item {
-  name: "sidewalk_walking"
+  name: "listening_music"
   id: 24
 }
+
+# Social Interaction Actions (3x series)
 item {
-  name: "crossing_street"
-  id: 25
-}
-item {
-  name: "waiting_signal"
-  id: 26
-}
-item {
-  name: "looking_around"
-  id: 27
-}
-item {
-  name: "checking_map"
-  id: 28
-}
-item {
-  name: "entering_building"
-  id: 29
-}
-item {
-  name: "exiting_building"
+  name: "alone"
   id: 30
 }
 item {
-  name: "upright_normal"
+  name: "talking_companion"
   id: 31
 }
 item {
-  name: "looking_down"
+  name: "group_walking"
   id: 32
 }
 item {
-  name: "looking_up"
+  name: "greeting_someone"
   id: 33
 }
 item {
-  name: "hands_in_pockets"
+  name: "asking_directions"
   id: 34
 }
 item {
-  name: "arms_crossed"
+  name: "avoiding_crowd"
   id: 35
 }
+
+# Carrying Items Actions (4x series)
 item {
-  name: "pointing_gesture"
-  id: 36
-}
-item {
-  name: "bowing_gesture"
-  id: 37
-}
-item {
-  name: "business_attire"
-  id: 38
-}
-item {
-  name: "casual_wear"
-  id: 39
-}
-item {
-  name: "tourist_style"
+  name: "empty_hands"
   id: 40
 }
 item {
-  name: "school_uniform"
+  name: "shopping_bags"
   id: 41
 }
 item {
-  name: "sports_wear"
+  name: "backpack"
   id: 42
 }
 item {
-  name: "traditional_wear"
+  name: "briefcase_bag"
   id: 43
 }
 item {
-  name: "rush_hour"
+  name: "umbrella"
   id: 44
 }
 item {
-  name: "leisure_time"
+  name: "food_drink"
   id: 45
 }
 item {
-  name: "shopping_time"
+  name: "multiple_items"
   id: 46
+}
+
+# Street Behavior Actions (5x series)
+item {
+  name: "sidewalk_walking"
+  id: 50
+}
+item {
+  name: "crossing_street"
+  id: 51
+}
+item {
+  name: "waiting_signal"
+  id: 52
+}
+item {
+  name: "looking_around"
+  id: 53
+}
+item {
+  name: "checking_map"
+  id: 54
+}
+item {
+  name: "entering_building"
+  id: 55
+}
+item {
+  name: "exiting_building"
+  id: 56
+}
+
+# Posture Gesture Actions (6x series)
+item {
+  name: "upright_normal"
+  id: 60
+}
+item {
+  name: "looking_down"
+  id: 61
+}
+item {
+  name: "looking_up"
+  id: 62
+}
+item {
+  name: "hands_in_pockets"
+  id: 63
+}
+item {
+  name: "arms_crossed"
+  id: 64
+}
+item {
+  name: "pointing_gesture"
+  id: 65
+}
+item {
+  name: "bowing_gesture"
+  id: 66
+}
+
+# Clothing Style Actions (7x series)
+item {
+  name: "business_attire"
+  id: 70
+}
+item {
+  name: "casual_wear"
+  id: 71
+}
+item {
+  name: "tourist_style"
+  id: 72
+}
+item {
+  name: "school_uniform"
+  id: 73
+}
+item {
+  name: "sports_wear"
+  id: 74
+}
+item {
+  name: "traditional_wear"
+  id: 75
+}
+
+# Time Context Actions (8x series)
+item {
+  name: "rush_hour"
+  id: 80
+}
+item {
+  name: "leisure_time"
+  id: 81
+}
+item {
+  name: "shopping_time"
+  id: 82
 }
 item {
   name: "tourist_hours"
-  id: 47
+  id: 83
 }
 item {
   name: "lunch_break"
-  id: 48
+  id: 84
 }
 item {
   name: "evening_stroll"
-  id: 49
+  id: 85
 }
 
 

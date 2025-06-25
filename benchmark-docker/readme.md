@@ -14,8 +14,8 @@
 ```
 benchmark-docker/data/ava/
 ├── annotations/
-│   ├── ava_train_v2.2.csv
-│   ├── ava_val_v2.1.csv
+│   ├── train.csv
+│   ├── val.csv
 │   ├── label_map.txt
 │   └── (any other annotation files you have)
 ├── rawframes/
@@ -27,8 +27,8 @@ benchmark-docker/data/ava/
 │   │   └── (frames for video 2...)
 │   └── (more video folders...)
 ├── proposals/
-│   ├── ava_dense_proposals_train.FAIR.recall_93.9.pkl
-│   ├── ava_dense_proposals_val.FAIR.recall_93.9.pkl
+│   ├── dense_proposals_train.pkl
+│   ├── dense_proposals_val.pkl
 │   └── (other proposal files if needed)
 ```
 
@@ -77,56 +77,57 @@ Your coordinates should be normalized (between 0 and 1), and x1 should be less t
 Create a `label_map.txt` with exactly 50 lines - one class name per line. Here's the standard AVA classes if you need them:
 
 ```
-0 walking_behavior:normal_walk
-1 walking_behavior:fast_walk
-2 walking_behavior:slow_walk
-3 walking_behavior:standing_still
-4 walking_behavior:jogging
-5 walking_behavior:window_shopping
-6 phone_usage:no_phone
-7 phone_usage:talking_phone
-8 phone_usage:texting
-9 phone_usage:taking_photo
-10 phone_usage:listening_music
-11 social_interaction:alone
-12 social_interaction:talking_companion
-13 social_interaction:group_walking
-14 social_interaction:greeting_someone
-15 social_interaction:asking_directions
-16 social_interaction:avoiding_crowd
-17 carrying_items:empty_hands
-18 carrying_items:shopping_bags
-19 carrying_items:backpack
-20 carrying_items:briefcase_bag
-21 carrying_items:umbrella
-22 carrying_items:food_drink
-23 carrying_items:multiple_items
-24 street_behavior:sidewalk_walking
-25 street_behavior:crossing_street
-26 street_behavior:waiting_signal
-27 street_behavior:looking_around
-28 street_behavior:checking_map
-29 street_behavior:entering_building
-30 street_behavior:exiting_building
-31 posture_gesture:upright_normal
-32 posture_gesture:looking_down
-33 posture_gesture:looking_up
-34 posture_gesture:hands_in_pockets
-35 posture_gesture:arms_crossed
-36 posture_gesture:pointing_gesture
-37 posture_gesture:bowing_gesture
-38 clothing_style:business_attire
-39 clothing_style:casual_wear
-40 clothing_style:tourist_style
-41 clothing_style:school_uniform
-42 clothing_style:sports_wear
-43 clothing_style:traditional_wear
-44 time_context:rush_hour
-45 time_context:leisure_time
-46 time_context:shopping_time
-47 time_context:tourist_hours
-48 time_context:lunch_break
-49 time_context:evening_stroll
+0: normal_walk
+1: fast_walk
+2: slow_walk
+3: standing_still
+4: jogging
+5: window_shopping
+6: no_phone
+7: talking_phone
+8: texting
+9: taking_photo
+10: listening_music
+11: alone
+12: talking_companion
+13: group_walking
+14: greeting_someone
+15: asking_directions
+16: avoiding_crowd
+17: empty_hands
+18: shopping_bags
+19: backpack
+20: briefcase_bag
+21: umbrella
+22: food_drink
+23: multiple_items
+24: sidewalk_walking
+25: crossing_street
+26: waiting_signal
+27: looking_around
+28: checking_map
+29: entering_building
+30: exiting_building
+31: upright_normal
+32: looking_down
+33: looking_up
+34: hands_in_pockets
+35: arms_crossed
+36: pointing_gesture
+37: bowing_gesture
+38: business_attire
+39: casual_wear
+40: tourist_style
+41: school_uniform
+42: sports_wear
+43: traditional_wear
+44: rush_hour
+45: leisure_time
+46: shopping_time
+47: tourist_hours
+48: lunch_break
+49: evening_stroll
+
 
 ```
 

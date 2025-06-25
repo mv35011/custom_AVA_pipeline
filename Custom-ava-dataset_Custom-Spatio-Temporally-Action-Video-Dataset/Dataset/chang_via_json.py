@@ -6,7 +6,6 @@ from datetime import datetime
 
 
 def backup_file(file_path):
-
     try:
         backup_path = file_path.replace('.json', '_backup.json')
         shutil.copy2(file_path, backup_path)
@@ -29,9 +28,12 @@ def process_via_json_file(json_path, create_backup=True):
     try:
         with open(json_path, 'r', encoding='utf-8') as f:
             via_json = json.load(f)
+
         if 'metadata' not in via_json:
             print(f"  Warning: No 'metadata' field found in {json_path}")
             return False
+
+        # FIXED: Dynamically detect all attributes instead of hardcoding 1,2,3
         attributes_config = {}
         if 'attribute' in via_json:
             for attr_id, attr_info in via_json['attribute'].items():
@@ -41,9 +43,12 @@ def process_via_json_file(json_path, create_backup=True):
                 else:
                     attributes_config[attr_id] = ''
         else:
-            attributes_config = {'1': '', '2': '', '3': ''}
+            # Fallback: create attributes 1-8 to match dense_proposals_train_to_via.py
+            for i in range(1, 9):
+                attributes_config[str(i)] = ''
 
         print(f"  Using attributes: {attributes_config}")
+
         modified_count = 0
         for metadata_key in via_json['metadata']:
             if 'av' in via_json['metadata'][metadata_key]:
@@ -51,6 +56,7 @@ def process_via_json_file(json_path, create_backup=True):
                 modified_count += 1
 
         print(f"  Modified {modified_count} metadata entries")
+
         base_name = os.path.basename(json_path)
         dir_name = os.path.dirname(json_path)
 
@@ -61,6 +67,7 @@ def process_via_json_file(json_path, create_backup=True):
             new_name = f"{name_parts[0]}_s.{name_parts[1]}"
 
         new_path = os.path.join(dir_name, new_name)
+
         with open(new_path, 'w', encoding='utf-8') as f:
             json.dump(via_json, f, indent=2, ensure_ascii=False)
 
@@ -87,6 +94,7 @@ def find_and_process_via_files(root_directory, create_backup=True):
 
     processed_files = []
     failed_files = []
+
     for root, dirs, files in os.walk(root_directory):
         if any(skip_dir in root for skip_dir in ['.backup', '__pycache__', '.git']):
             continue
@@ -99,6 +107,7 @@ def find_and_process_via_files(root_directory, create_backup=True):
                     processed_files.append(json_path)
                 else:
                     failed_files.append(json_path)
+
     print("\n" + "=" * 60)
     print("PROCESSING SUMMARY:")
     print(f"Successfully processed: {len(processed_files)} files")
@@ -120,10 +129,12 @@ def find_and_process_via_files(root_directory, create_backup=True):
 def main():
     """Main function with command line argument handling"""
     default_directory = "./choose_frames_middle"
+
     if len(sys.argv) > 1:
         root_directory = sys.argv[1]
     else:
         root_directory = default_directory
+
     create_backup = True
     if len(sys.argv) > 2 and sys.argv[2].lower() == 'no-backup':
         create_backup = False
@@ -134,7 +145,9 @@ def main():
     print(f"Create backups: {create_backup}")
     print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
+
     success_count, fail_count = find_and_process_via_files(root_directory, create_backup)
+
     if fail_count > 0:
         print(f"\nWarning: {fail_count} files failed to process")
         sys.exit(1)
@@ -144,6 +157,10 @@ def main():
         sys.exit(1)
     else:
         print(f"\nAll {success_count} files processed successfully!")
+        print("\nNOTE: After annotation, rename '_proposal_s.json' files to '_finish.json'")
+        print("      or use the following command in your directory:")
+        print(
+            "      find . -name '*_proposal_s.json' -exec bash -c 'mv \"$1\" \"${1/_proposal_s.json/_finish.json}\"' _ {} \\;")
         sys.exit(0)
 
 

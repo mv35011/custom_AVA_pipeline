@@ -1,0 +1,15 @@
+1: normal_walk
+7: multiple_items
+8: action_8
+12: slow_walk
+13: action_13
+14: action_14
+18: talking_phone
+19: action_19
+20: action_20
+25: listening_music
+27: action_27
+28: action_28
+32: group_walking
+39: empty_hands
+45: food_drink
