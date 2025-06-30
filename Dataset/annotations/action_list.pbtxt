@@ -1,0 +1,215 @@
+# Walking Behavior Actions (1x series)
+item {
+  name: "normal_walk"
+  id: 10
+}
+item {
+  name: "fast_walk"
+  id: 11
+}
+item {
+  name: "slow_walk"
+  id: 12
+}
+item {
+  name: "standing_still"
+  id: 13
+}
+item {
+  name: "jogging"
+  id: 14
+}
+item {
+  name: "window_shopping"
+  id: 15
+}
+
+# Phone Usage Actions (2x series)
+item {
+  name: "no_phone"
+  id: 20
+}
+item {
+  name: "talking_phone"
+  id: 21
+}
+item {
+  name: "texting"
+  id: 22
+}
+item {
+  name: "taking_photo"
+  id: 23
+}
+item {
+  name: "listening_music"
+  id: 24
+}
+
+# Social Interaction Actions (3x series)
+item {
+  name: "alone"
+  id: 30
+}
+item {
+  name: "talking_companion"
+  id: 31
+}
+item {
+  name: "group_walking"
+  id: 32
+}
+item {
+  name: "greeting_someone"
+  id: 33
+}
+item {
+  name: "asking_directions"
+  id: 34
+}
+item {
+  name: "avoiding_crowd"
+  id: 35
+}
+
+# Carrying Items Actions (4x series)
+item {
+  name: "empty_hands"
+  id: 40
+}
+item {
+  name: "shopping_bags"
+  id: 41
+}
+item {
+  name: "backpack"
+  id: 42
+}
+item {
+  name: "briefcase_bag"
+  id: 43
+}
+item {
+  name: "umbrella"
+  id: 44
+}
+item {
+  name: "food_drink"
+  id: 45
+}
+item {
+  name: "multiple_items"
+  id: 46
+}
+
+# Street Behavior Actions (5x series)
+item {
+  name: "sidewalk_walking"
+  id: 50
+}
+item {
+  name: "crossing_street"
+  id: 51
+}
+item {
+  name: "waiting_signal"
+  id: 52
+}
+item {
+  name: "looking_around"
+  id: 53
+}
+item {
+  name: "checking_map"
+  id: 54
+}
+item {
+  name: "entering_building"
+  id: 55
+}
+item {
+  name: "exiting_building"
+  id: 56
+}
+
+# Posture Gesture Actions (6x series)
+item {
+  name: "upright_normal"
+  id: 60
+}
+item {
+  name: "looking_down"
+  id: 61
+}
+item {
+  name: "looking_up"
+  id: 62
+}
+item {
+  name: "hands_in_pockets"
+  id: 63
+}
+item {
+  name: "arms_crossed"
+  id: 64
+}
+item {
+  name: "pointing_gesture"
+  id: 65
+}
+item {
+  name: "bowing_gesture"
+  id: 66
+}
+
+# Clothing Style Actions (7x series)
+item {
+  name: "business_attire"
+  id: 70
+}
+item {
+  name: "casual_wear"
+  id: 71
+}
+item {
+  name: "tourist_style"
+  id: 72
+}
+item {
+  name: "school_uniform"
+  id: 73
+}
+item {
+  name: "sports_wear"
+  id: 74
+}
+item {
+  name: "traditional_wear"
+  id: 75
+}
+
+# Time Context Actions (8x series)
+item {
+  name: "rush_hour"
+  id: 80
+}
+item {
+  name: "leisure_time"
+  id: 81
+}
+item {
+  name: "shopping_time"
+  id: 82
+}
+item {
+  name: "tourist_hours"
+  id: 83
+}
+item {
+  name: "lunch_break"
+  id: 84
+}
+item {
+  name: "evening_stroll"
+  id: 85
+}

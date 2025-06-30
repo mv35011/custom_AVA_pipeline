@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="\Custom-ava-dataset_Custom-Spatio-Temporally-Action-Video-Dataset\Dataset\annotations\.ipynb_checkpoints\train-checkpoint.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Custom-ava-dataset_Custom-Spatio-Temporally-Action-Video-Dataset\Dataset\annotations\train.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Custom-ava-dataset_Custom-Spatio-Temporally-Action-Video-Dataset\Dataset\annotations\train_excluded_timestamps.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Custom-ava-dataset_Custom-Spatio-Temporally-Action-Video-Dataset\Dataset\annotations\val.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Custom-ava-dataset_Custom-Spatio-Temporally-Action-Video-Dataset\Dataset\train_personID.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Custom-ava-dataset_Custom-Spatio-Temporally-Action-Video-Dataset\Dataset\train_temp.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Custom-ava-dataset_Custom-Spatio-Temporally-Action-Video-Dataset\Dataset\train_without_personID.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Dataset\annotations\.ipynb_checkpoints\train-checkpoint.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\benchmark-docker\ava_dataset\annotations\train.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\benchmark-docker\ava_dataset\annotations\val.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\benchmark-docker\data\ava\annotations\train.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\benchmark-docker\data\ava\annotations\train_backup.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\benchmark-docker\data\ava\annotations\train_excluded_timestamps.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\benchmark-docker\data\ava\annotations\val.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\benchmark-docker\data\ava\annotations\val_backup.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
