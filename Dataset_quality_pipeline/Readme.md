@@ -214,6 +214,8 @@ This creates a comprehensive report with:
 
 This quality pipeline is designed to work **alongside** your existing video processing pipeline:
 
+
+
 ```
 Your Pipeline:          Quality Pipeline:
 Videos → Frames    →    Annotations → Quality Check
@@ -224,3 +226,142 @@ Videos → Frames    →    Annotations → Quality Check
 ```
 
 The quality pipeline only needs your annotation CSV files - it doesn't interfere with your video processing workflow!
+
+### File structure 
+```
+annotation_quality_pipeline/
+├── README.md
+├── requirements.txt
+├── config/
+│   ├── __init__.py
+│   ├── config.yaml                 # Main configuration file
+│   ├── annotation_guidelines.md    # Detailed annotation rules
+│   └── quality_thresholds.yaml     # IoU, Kappa thresholds
+│
+├── data/
+│   ├── raw_videos/                 # Original video files
+│   │   ├── video_001.mp4
+│   │   ├── video_002.mp4
+│   │   └── ...
+│   │
+│   ├── extracted_frames/           # Extracted frames per video
+│   │   ├── video_001/
+│   │   │   ├── img_00001.jpg       # Frame 1
+│   │   │   ├── img_00031.jpg       # Frame 31 (1 sec later @ 30fps)
+│   │   │   ├── img_00061.jpg       # Frame 61 (2 sec later @ 30fps)
+│   │   │   └── ...
+│   │   ├── video_002/
+│   │   │   ├── img_00001.jpg
+│   │   │   └── ...
+│   │   └── ...
+│   │
+│   ├── annotations/                # All annotation files
+│   │   ├── raw_annotations/        # Direct from CVAT/VIA
+│   │   │   ├── annotator_1/
+│   │   │   │   ├── batch_001.csv
+│   │   │   │   ├── batch_002.csv
+│   │   │   │   └── ...
+│   │   │   ├── annotator_2/
+│   │   │   └── ...
+│   │   │
+│   │   ├── processed_annotations/  # Standardized format
+│   │   │   ├── train.csv           # Final training annotations
+│   │   │   ├── val.csv             # Validation annotations
+│   │   │   ├── test.csv            # Test annotations
+│   │   │   └── overlap_samples.csv # Overlap annotations for quality check
+│   │   │
+│   │   └── golden_dataset/         # Ground truth for calibration
+│   │       ├── golden_train.csv
+│   │       └── golden_annotations_v1.csv
+│   │
+│   ├── assignments/                # Who annotates what
+│   │   ├── overlap_assignments.csv
+│   │   ├── unique_assignments.csv
+│   │   └── annotator_workload.csv
+│   │
+│   └── quality_reports/            # Quality analysis results
+│       ├── daily_reports/
+│       ├── weekly_reports/
+│       └── final_quality_report.pdf
+│
+├── src/
+│   ├── __init__.py
+│   │
+│   ├── data_preparation/           # OPTIONAL - Only if you need format conversion
+│   │   ├── __init__.py
+│   │   ├── format_converter.py     # Convert between frame_id and timestamps
+│   │   └── dataset_splitter.py     # Split into overlap/unique assignments
+│   │
+│   ├── annotation_management/
+│   │   ├── __init__.py
+│   │   ├── assignment_generator.py # Generate annotation assignments
+│   │   ├── cvat_integration.py     # CVAT API integration
+│   │   ├── annotation_validator.py # Basic format validation
+│   │   └── batch_processor.py      # Process annotation batches
+│   │
+│   ├── quality_control/
+│   │   ├── __init__.py
+│   │   ├── iou_calculator.py       # Calculate spatial IoU
+│   │   ├── temporal_iou.py         # Calculate temporal IoU
+│   │   ├── kappa_calculator.py     # Calculate Fleiss' Kappa
+│   │   ├── agreement_analyzer.py   # Main quality analysis
+│   │   ├── outlier_detector.py     # Detect problematic annotations
+│   │   └── quality_reporter.py     # Generate quality reports
+│   │
+│   ├── monitoring/
+│   │   ├── __init__.py
+│   │   ├── dashboard.py            # Real-time quality dashboard
+│   │   ├── alert_system.py         # Quality threshold alerts
+│   │   ├── progress_tracker.py     # Track annotation progress
+│   │   └── performance_metrics.py  # Annotator performance tracking
+│   │
+│   ├── calibration/
+│   │   ├── __init__.py
+│   │   ├── golden_dataset_creator.py # Create calibration dataset
+│   │   ├── calibration_analyzer.py   # Analyze calibration results
+│   │   └── guideline_updater.py      # Update annotation guidelines
+│   │
+│   └── utils/
+│       ├── __init__.py
+│       ├── file_utils.py           # File I/O utilities
+│       ├── visualization.py        # Plot quality metrics
+│       ├── data_loader.py          # Load annotation data
+│       └── logger.py               # Logging utilities
+│
+├── scripts/
+│   ├── setup_pipeline.py           # Initial setup script
+│   ├── create_assignments.py       # Generate annotation assignments
+│   ├── run_quality_check.py        # Run quality analysis
+│   ├── generate_reports.py         # Generate quality reports
+│   └── export_final_dataset.py     # Export final dataset
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_quality_metrics.py     # Test quality calculations
+│   ├── test_data_processing.py     # Test data processing
+│   └── test_integration.py         # Integration tests
+│
+├── notebooks/
+│   ├── data_exploration.ipynb      # Explore annotation data
+│   ├── quality_analysis.ipynb      # Quality analysis experiments
+│   └── visualization.ipynb         # Visualize quality metrics
+│
+├── docs/
+│   ├── setup_guide.md              # Setup instructions
+│   ├── annotation_workflow.md      # Annotation workflow
+│   ├── quality_pipeline_guide.md   # Quality pipeline usage
+│   └── api_documentation.md        # API documentation
+│
+└── outputs/
+    ├── final_dataset/              # Final processed dataset
+    │   ├── ava_format/             # AVA-compatible format
+    │   │   ├── train.csv
+    │   │   ├── val.csv
+    │   │   └── test.csv
+    │   └── custom_format/          # Your custom format
+    │       ├── train.csv
+    │       └── val.csv
+    │
+    ├── quality_reports/            # Generated quality reports
+    └── visualizations/             # Quality metric plots
+```
