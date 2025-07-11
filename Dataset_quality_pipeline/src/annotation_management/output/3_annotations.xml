@@ -1,0 +1,148 @@
+<?xml version="1.0" ?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>1</id>
+      <name>3_task</name>
+      <size>15</size>
+      <labels>
+        <label>
+          <name>person</name>
+          <color>#ff0000</color>
+          <attributes>
+            <attribute>
+              <name>walking_behavior</name>
+              <input_type>select</input_type>
+              <values>unknown
+normal_walk
+fast_walk
+slow_walk
+standing_still
+jogging</values>
+            </attribute>
+            <attribute>
+              <name>phone_usage</name>
+              <input_type>select</input_type>
+              <values>unknown
+no_phone
+talking_phone
+texting
+taking_photo</values>
+            </attribute>
+            <attribute>
+              <name>social_interaction</name>
+              <input_type>select</input_type>
+              <values>unknown
+alone
+talking_companion
+group_walking
+greeting_someone</values>
+            </attribute>
+            <attribute>
+              <name>carrying_items</name>
+              <input_type>select</input_type>
+              <values>unknown
+empty_hands
+shopping_bags
+backpack
+briefcase_bag</values>
+            </attribute>
+            <attribute>
+              <name>street_behavior</name>
+              <input_type>select</input_type>
+              <values>unknown
+sidewalk_walking
+crossing_street
+waiting_signal
+looking_around</values>
+            </attribute>
+            <attribute>
+              <name>posture_gesture</name>
+              <input_type>select</input_type>
+              <values>unknown
+upright_normal
+looking_down
+looking_up
+hands_in_pockets</values>
+            </attribute>
+            <attribute>
+              <name>clothing_style</name>
+              <input_type>select</input_type>
+              <values>unknown
+business_attire
+casual_wear
+tourist_style
+sports_wear</values>
+            </attribute>
+            <attribute>
+              <name>time_context</name>
+              <input_type>select</input_type>
+              <values>unknown
+rush_hour
+leisure_time
+shopping_time
+lunch_break</values>
+            </attribute>
+          </attributes>
+        </label>
+      </labels>
+    </task>
+  </meta>
+  <image id="0" name="1_000031.jpg" width="640" height="360"/>
+  <image id="1" name="1_000301.jpg" width="640" height="360"/>
+  <image id="2" name="2_000031.jpg" width="640" height="360"/>
+  <image id="3" name="2_000301.jpg" width="640" height="360"/>
+  <image id="4" name="3_000001.jpg" width="640" height="360">
+    <box label="person" occluded="0" source="manual" xtl="306.00" ytl="193.00" xbr="318.00" ybr="221.00">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box label="person" occluded="0" source="manual" xtl="245.00" ytl="191.00" xbr="266.00" ybr="252.00">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box label="person" occluded="0" source="manual" xtl="292.00" ytl="193.00" xbr="303.00" ybr="220.00">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box label="person" occluded="0" source="manual" xtl="270.00" ytl="187.00" xbr="289.00" ybr="241.00">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+  </image>
+  <image id="5" name="3_000031.jpg" width="640" height="360"/>
+  <image id="6" name="3_000061.jpg" width="640" height="360"/>
+  <image id="7" name="3_000091.jpg" width="640" height="360"/>
+  <image id="8" name="3_000121.jpg" width="640" height="360"/>
+  <image id="9" name="3_000151.jpg" width="640" height="360"/>
+  <image id="10" name="3_000181.jpg" width="640" height="360"/>
+  <image id="11" name="3_000211.jpg" width="640" height="360"/>
+  <image id="12" name="3_000241.jpg" width="640" height="360"/>
+  <image id="13" name="3_000271.jpg" width="640" height="360"/>
+  <image id="14" name="3_000301.jpg" width="640" height="360"/>
+</annotations>

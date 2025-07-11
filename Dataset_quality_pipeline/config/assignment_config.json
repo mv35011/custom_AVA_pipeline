@@ -1,0 +1,30 @@
+{
+  "description": "Assignment configuration for multi-annotator AVA dataset tasks",
+  "created": "2025-01-15T10:00:00",
+  "overlap_percentage": 20,
+  "project_name": "AVA_MultiAnnotator_Production",
+  "assignments": [
+    {
+      "clip_id": 1,
+      "assigned_to": "annotator1",
+      "overlap_with": ""
+    },
+    {
+      "clip_id": 2,
+      "assigned_to": "annotator2",
+      "overlap_with": "annotator1"
+    },
+    {
+      "clip_id": 3,
+      "assigned_to": "annotator3",
+      "overlap_with": ""
+    }
+  ],
+  "notes": {
+    "overlap_strategy": "Manual assignment for quality control",
+    "clip_id_format": "Corresponds to {clip_id}.zip files",
+    "assigned_to": "Primary annotator responsible for this clip",
+    "overlap_with": "Additional annotator(s) for consensus/quality control",
+    "export_format": "CVAT 1.1 for CSV generation"
+  }
+}

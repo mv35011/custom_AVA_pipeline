@@ -59,13 +59,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\Dataset_quality_pipeline\Readme.md">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\benchmark-docker\ava_dataset\annotations\train.csv">
           <value>
             <Attribute>

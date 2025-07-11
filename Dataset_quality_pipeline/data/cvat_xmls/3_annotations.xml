@@ -1,0 +1,240 @@
+<?xml version="1.0" ?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>1</id>
+      <name>3_task</name>
+      <size>15</size>
+      <labels>
+        <label>
+          <name>person</name>
+          <color>#ff0000</color>
+          <attributes>
+            <attribute>
+              <name>walking_behavior</name>
+              <input_type>select</input_type>
+              <values>unknown
+normal_walk
+fast_walk
+slow_walk
+standing_still
+jogging</values>
+            </attribute>
+            <attribute>
+              <name>phone_usage</name>
+              <input_type>select</input_type>
+              <values>unknown
+no_phone
+talking_phone
+texting
+taking_photo</values>
+            </attribute>
+            <attribute>
+              <name>social_interaction</name>
+              <input_type>select</input_type>
+              <values>unknown
+alone
+talking_companion
+group_walking
+greeting_someone</values>
+            </attribute>
+            <attribute>
+              <name>carrying_items</name>
+              <input_type>select</input_type>
+              <values>unknown
+empty_hands
+shopping_bags
+backpack
+briefcase_bag</values>
+            </attribute>
+            <attribute>
+              <name>street_behavior</name>
+              <input_type>select</input_type>
+              <values>unknown
+sidewalk_walking
+crossing_street
+waiting_signal
+looking_around</values>
+            </attribute>
+            <attribute>
+              <name>posture_gesture</name>
+              <input_type>select</input_type>
+              <values>unknown
+upright_normal
+looking_down
+looking_up
+hands_in_pockets</values>
+            </attribute>
+            <attribute>
+              <name>clothing_style</name>
+              <input_type>select</input_type>
+              <values>unknown
+business_attire
+casual_wear
+tourist_style
+sports_wear</values>
+            </attribute>
+            <attribute>
+              <name>time_context</name>
+              <input_type>select</input_type>
+              <values>unknown
+rush_hour
+leisure_time
+shopping_time
+lunch_break</values>
+            </attribute>
+          </attributes>
+        </label>
+      </labels>
+    </task>
+  </meta>
+  <track id="1" label="person">
+    <box frame="1" xtl="306.00" ytl="193.00" xbr="318.00" ybr="221.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="2" xtl="304.00" ytl="192.00" xbr="314.00" ybr="222.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="3" xtl="306.00" ytl="192.00" xbr="317.00" ybr="224.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="5" xtl="304.00" ytl="195.00" xbr="315.00" ybr="223.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+  </track>
+  <track id="2" label="person">
+    <box frame="1" xtl="245.00" ytl="191.00" xbr="266.00" ybr="252.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="2" xtl="243.00" ytl="193.00" xbr="263.00" ybr="253.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="3" xtl="245.00" ytl="192.00" xbr="265.00" ybr="250.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+  </track>
+  <track id="3" label="person">
+    <box frame="1" xtl="292.00" ytl="193.00" xbr="303.00" ybr="220.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="2" xtl="290.00" ytl="192.00" xbr="302.00" ybr="221.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="3" xtl="292.00" ytl="192.00" xbr="305.00" ybr="223.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+  </track>
+  <track id="4" label="person">
+    <box frame="1" xtl="270.00" ytl="187.00" xbr="289.00" ybr="241.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="2" xtl="270.00" ytl="185.00" xbr="287.00" ybr="239.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="3" xtl="268.00" ytl="186.00" xbr="283.00" ybr="238.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+    <box frame="4" xtl="271.00" ytl="185.00" xbr="285.00" ybr="235.00" outside="0" occluded="0" keyframe="1">
+      <attribute name="walking_behavior">unknown</attribute>
+      <attribute name="phone_usage">unknown</attribute>
+      <attribute name="social_interaction">unknown</attribute>
+      <attribute name="carrying_items">unknown</attribute>
+      <attribute name="street_behavior">unknown</attribute>
+      <attribute name="posture_gesture">unknown</attribute>
+      <attribute name="clothing_style">unknown</attribute>
+      <attribute name="time_context">unknown</attribute>
+    </box>
+  </track>
+</annotations>
