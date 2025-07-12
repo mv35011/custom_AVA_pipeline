@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>53</id>
+      <size>11</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2025-07-11 07:00:56.838386+00:00</created>
+      <updated>2025-07-11 07:00:57.267743+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>10</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>53</id>
+          <start>0</start>
+          <stop>10</stop>
+          <url>http://localhost:8080/api/jobs/53</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>mv350</username>
+        <email>mv350113@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>person</name>
+          <color>#ff0000</color>
+          <type>any</type>
+          <attributes>
+            <attribute>
+              <name>walking_behavior</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value>unknown</default_value>
+              <values>unknown
+normal_walk
+fast_walk
+slow_walk
+standing_still
+jogging</values>
+            </attribute>
+            <attribute>
+              <name>phone_usage</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value>unknown</default_value>
+              <values>unknown
+no_phone
+talking_phone
+texting
+taking_photo</values>
+            </attribute>
+            <attribute>
+              <name>social_interaction</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value>unknown</default_value>
+              <values>unknown
+alone
+talking_companion
+group_walking
+greeting_someone</values>
+            </attribute>
+            <attribute>
+              <name>carrying_items</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value>unknown</default_value>
+              <values>unknown
+empty_hands
+shopping_bags
+backpack
+briefcase_bag</values>
+            </attribute>
+            <attribute>
+              <name>street_behavior</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value>unknown</default_value>
+              <values>unknown
+sidewalk_walking
+crossing_street
+waiting_signal
+looking_around</values>
+            </attribute>
+            <attribute>
+              <name>posture_gesture</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value>unknown</default_value>
+              <values>unknown
+upright_normal
+looking_down
+looking_up
+hands_in_pockets</values>
+            </attribute>
+            <attribute>
+              <name>clothing_style</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value>unknown</default_value>
+              <values>unknown
+business_attire
+casual_wear
+tourist_style
+sports_wear</values>
+            </attribute>
+            <attribute>
+              <name>time_context</name>
+              <mutable>True</mutable>
+              <input_type>select</input_type>
+              <default_value>unknown</default_value>
+              <values>unknown
+rush_hour
+leisure_time
+shopping_time
+lunch_break</values>
+            </attribute>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2025-07-11 07:01:58.496663+00:00</dumped>
+  </meta>
+  <image id="0" name="1_000001.jpg" width="640" height="360">
+  </image>
+  <image id="1" name="1_000031.jpg" width="640" height="360">
+  </image>
+  <image id="2" name="1_000061.jpg" width="640" height="360">
+  </image>
+  <image id="3" name="1_000091.jpg" width="640" height="360">
+  </image>
+  <image id="4" name="1_000121.jpg" width="640" height="360">
+  </image>
+  <image id="5" name="1_000151.jpg" width="640" height="360">
+  </image>
+  <image id="6" name="1_000181.jpg" width="640" height="360">
+  </image>
+  <image id="7" name="1_000211.jpg" width="640" height="360">
+  </image>
+  <image id="8" name="1_000241.jpg" width="640" height="360">
+  </image>
+  <image id="9" name="1_000271.jpg" width="640" height="360">
+  </image>
+  <image id="10" name="1_000301.jpg" width="640" height="360">
+  </image>
+</annotations>

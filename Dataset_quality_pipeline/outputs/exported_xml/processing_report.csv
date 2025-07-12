@@ -1,0 +1,5 @@
+clip_id,annotator,task_type,job_id,xml_file_path
+1,annotator1,primary,73,clip_1\annotator1\primary\job_73\clip1_job73_annotations.xml
+2,annotator1,overlap,74,clip_2\annotator1\overlap\job_74\clip2_job74_annotations.xml
+2,annotator2,primary,75,clip_2\annotator2\primary\job_75\clip2_job75_annotations.xml
+3,annotator3,primary,76,clip_3\annotator3\primary\job_76\clip3_job76_annotations.xml

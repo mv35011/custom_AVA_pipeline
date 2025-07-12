@@ -1,0 +1,38 @@
+[
+  {
+    "project_id": 47,
+    "task_id": 136,
+    "job_id": 73,
+    "clip_id": "1",
+    "annotator": "annotator1",
+    "task_type": "primary",
+    "zip_file": "1.zip"
+  },
+  {
+    "project_id": 47,
+    "task_id": 137,
+    "job_id": 74,
+    "clip_id": "2",
+    "annotator": "annotator1",
+    "task_type": "overlap",
+    "zip_file": "2.zip"
+  },
+  {
+    "project_id": 47,
+    "task_id": 138,
+    "job_id": 75,
+    "clip_id": "2",
+    "annotator": "annotator2",
+    "task_type": "primary",
+    "zip_file": "2.zip"
+  },
+  {
+    "project_id": 47,
+    "task_id": 139,
+    "job_id": 76,
+    "clip_id": "3",
+    "annotator": "annotator3",
+    "task_type": "primary",
+    "zip_file": "3.zip"
+  }
+]

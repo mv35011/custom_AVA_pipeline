@@ -101,12 +101,32 @@ Replace with actual export filename from cvat_server.
 
 Extract and verify export XML.
 
+### Next we will be generating meta_data.json which is mapping for project_id, job_id and task_id
+```bash
+cd src/annotation_management
+python metadata_generator.py
+```
+This creates a meta data json at the specified path
+keep it at the required extract export files location
+
+Now we generate the required folder structure
+by copying all the files from the docker directory , extracting them and renaming them acording to the meta data mapping
+
+```bash
+cd src/annotation_management
+python extract_arrange_exports.py
+```
+this also creates a report csv for human readable file arrangement
+
+next we will be extracting our no_personID_train.csv from the export json and then running quality checks
+
 ## Future Development
 
-- Script to map project_id, task_id, job_id
-- Automated directory structure for exports
+- Script to map project_id, task_id, job_id - DONE
+- Automated directory structure for exports - DONE
 - Generate `no_personID_train.csv` from processed exports
-
+- Run quality checks using iou calculator for the overlapped clips
+- create a dash board to parse and display all the results and reports
 ## Directory Structure
 ```
 ├── config/

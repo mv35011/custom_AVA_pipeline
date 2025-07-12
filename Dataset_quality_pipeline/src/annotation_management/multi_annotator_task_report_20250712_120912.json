@@ -1,0 +1,205 @@
+{
+  "project_id": 47,
+  "creation_timestamp": "2025-07-12T12:09:12.046308",
+  "assignment_config_path": "C:\\Users\\mv350\\Downloads\\Documents\\Pycharm_projects\\Dataset_Quality_control\\config\\assignment_config.json",
+  "annotators": [
+    "annotator1",
+    "annotator2",
+    "annotator3"
+  ],
+  "tasks": [
+    {
+      "project_id": 47,
+      "task_id": 136,
+      "job_ids": [
+        73
+      ],
+      "task_name": "AVA_annotator1_primary_clips_1-1",
+      "annotator": "annotator1",
+      "task_type": "primary",
+      "clip_ids": [
+        "1"
+      ],
+      "zip_files": [
+        "1.zip"
+      ],
+      "total_size_mb": 0.7,
+      "xml_files_imported": 0,
+      "xml_files_found": 1
+    },
+    {
+      "project_id": 47,
+      "task_id": 137,
+      "job_ids": [
+        74
+      ],
+      "task_name": "AVA_annotator1_overlap_clips_2-2",
+      "annotator": "annotator1",
+      "task_type": "overlap",
+      "clip_ids": [
+        "2"
+      ],
+      "zip_files": [
+        "2.zip"
+      ],
+      "total_size_mb": 0.72,
+      "xml_files_imported": 0,
+      "xml_files_found": 1
+    },
+    {
+      "project_id": 47,
+      "task_id": 138,
+      "job_ids": [
+        75
+      ],
+      "task_name": "AVA_annotator2_primary_clips_2-2",
+      "annotator": "annotator2",
+      "task_type": "primary",
+      "clip_ids": [
+        "2"
+      ],
+      "zip_files": [
+        "2.zip"
+      ],
+      "total_size_mb": 0.72,
+      "xml_files_imported": 0,
+      "xml_files_found": 1
+    },
+    {
+      "project_id": 47,
+      "task_id": 139,
+      "job_ids": [
+        76
+      ],
+      "task_name": "AVA_annotator3_primary_clips_3-3",
+      "annotator": "annotator3",
+      "task_type": "primary",
+      "clip_ids": [
+        "3"
+      ],
+      "zip_files": [
+        "3.zip"
+      ],
+      "total_size_mb": 0.67,
+      "xml_files_imported": 0,
+      "xml_files_found": 1
+    }
+  ],
+  "annotator_tasks": {
+    "annotator1": {
+      "primary": [
+        {
+          "project_id": 47,
+          "task_id": 136,
+          "job_ids": [
+            73
+          ],
+          "task_name": "AVA_annotator1_primary_clips_1-1",
+          "annotator": "annotator1",
+          "task_type": "primary",
+          "clip_ids": [
+            "1"
+          ],
+          "zip_files": [
+            "1.zip"
+          ],
+          "total_size_mb": 0.7,
+          "xml_files_imported": 0,
+          "xml_files_found": 1
+        }
+      ],
+      "overlap": [
+        {
+          "project_id": 47,
+          "task_id": 137,
+          "job_ids": [
+            74
+          ],
+          "task_name": "AVA_annotator1_overlap_clips_2-2",
+          "annotator": "annotator1",
+          "task_type": "overlap",
+          "clip_ids": [
+            "2"
+          ],
+          "zip_files": [
+            "2.zip"
+          ],
+          "total_size_mb": 0.72,
+          "xml_files_imported": 0,
+          "xml_files_found": 1
+        }
+      ]
+    },
+    "annotator2": {
+      "primary": [
+        {
+          "project_id": 47,
+          "task_id": 138,
+          "job_ids": [
+            75
+          ],
+          "task_name": "AVA_annotator2_primary_clips_2-2",
+          "annotator": "annotator2",
+          "task_type": "primary",
+          "clip_ids": [
+            "2"
+          ],
+          "zip_files": [
+            "2.zip"
+          ],
+          "total_size_mb": 0.72,
+          "xml_files_imported": 0,
+          "xml_files_found": 1
+        }
+      ],
+      "overlap": []
+    },
+    "annotator3": {
+      "primary": [
+        {
+          "project_id": 47,
+          "task_id": 139,
+          "job_ids": [
+            76
+          ],
+          "task_name": "AVA_annotator3_primary_clips_3-3",
+          "annotator": "annotator3",
+          "task_type": "primary",
+          "clip_ids": [
+            "3"
+          ],
+          "zip_files": [
+            "3.zip"
+          ],
+          "total_size_mb": 0.67,
+          "xml_files_imported": 0,
+          "xml_files_found": 1
+        }
+      ],
+      "overlap": []
+    }
+  },
+  "overlap_analysis": {
+    "2": {
+      "primary_annotators": [
+        "annotator2"
+      ],
+      "overlap_annotators": [
+        "annotator1"
+      ],
+      "total_annotators": 2
+    }
+  },
+  "summary": {
+    "total_tasks": 4,
+    "total_annotators": 3,
+    "total_clips": 3,
+    "overlap_clips": 1,
+    "total_size_mb": 2.8099999999999996,
+    "xml_files_imported": 0,
+    "tasks_by_type": {
+      "primary": 3,
+      "overlap": 1
+    }
+  }
+}

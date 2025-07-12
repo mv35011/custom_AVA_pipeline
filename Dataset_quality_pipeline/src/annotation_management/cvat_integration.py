@@ -419,13 +419,27 @@ class CVATClient:
             print(f"✓ Empty task created: {name} (ID: {task_id})")
 
             if self.upload_zip_files_improved(task_id, zip_files):
-                job_ids = self.get_task_job_ids(task_id)
-                print(f"✓ Task completed. Job IDs: {job_ids}")
+                # --- START: MODIFIED LOGIC ---
+                print(f"✓ Data processing complete. Waiting for job creation...")
+                job_ids = []
+                # Retry for 15 seconds to give CVAT time to create the jobs
+                for _ in range(15):
+                    job_ids = self.get_task_job_ids(task_id)
+                    if job_ids:
+                        print(f"✓ Found jobs for task {task_id}.")
+                        break  # Exit the loop once jobs are found
+                    time.sleep(1) # Wait 1 second before retrying
+
+                if not job_ids:
+                    print(f"⚠ Warning: Could not retrieve job IDs for task {task_id} after waiting.")
+
+                print(f"✓ Task creation process finished. Job IDs: {job_ids}")
                 return {
                     'task_id': task_id,
                     'job_ids': job_ids,
                     'project_id': project_id
                 }
+                # --- END: MODIFIED LOGIC ---
             else:
                 print(f"Failed to upload data to task {task_id}")
                 return None
