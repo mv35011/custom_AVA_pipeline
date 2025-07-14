@@ -1,0 +1,73 @@
+{
+  "project_id": 3,
+  "annotator": "mv350",
+  "creation_timestamp": null,
+  "tasks": [
+    {
+      "task_id": {
+        "task_id": 1,
+        "job_ids": [
+          1
+        ],
+        "project_id": 3
+      },
+      "task_name": "AVA_Subdir_1_mv350",
+      "subdirectory": 1,
+      "zip_file_path": "/Users/surya/custom_AVA_pipeline/custom_AVA_pipeline/Dataset_quality_pipeline/data/Dataset/zip_choose_frames_middle/1.zip",
+      "zip_filename": "1.zip",
+      "zip_size_mb": 0.7,
+      "annotator": "mv350",
+      "xml_imported": true,
+      "xml_file_path": "/Users/surya/custom_AVA_pipeline/custom_AVA_pipeline/Dataset_quality_pipeline/data/cvat_xmls/1_annotations.xml"
+    },
+    {
+      "task_id": {
+        "task_id": 2,
+        "job_ids": [
+          2
+        ],
+        "project_id": 3
+      },
+      "task_name": "AVA_Subdir_2_mv350",
+      "subdirectory": 2,
+      "zip_file_path": "/Users/surya/custom_AVA_pipeline/custom_AVA_pipeline/Dataset_quality_pipeline/data/Dataset/zip_choose_frames_middle/2.zip",
+      "zip_filename": "2.zip",
+      "zip_size_mb": 0.72,
+      "annotator": "mv350",
+      "xml_imported": true,
+      "xml_file_path": "/Users/surya/custom_AVA_pipeline/custom_AVA_pipeline/Dataset_quality_pipeline/data/cvat_xmls/2_annotations.xml"
+    },
+    {
+      "task_id": {
+        "task_id": 3,
+        "job_ids": [
+          3
+        ],
+        "project_id": 3
+      },
+      "task_name": "AVA_Subdir_3_mv350",
+      "subdirectory": 3,
+      "zip_file_path": "/Users/surya/custom_AVA_pipeline/custom_AVA_pipeline/Dataset_quality_pipeline/data/Dataset/zip_choose_frames_middle/3.zip",
+      "zip_filename": "3.zip",
+      "zip_size_mb": 0.67,
+      "annotator": "mv350",
+      "xml_imported": true,
+      "xml_file_path": "/Users/surya/custom_AVA_pipeline/custom_AVA_pipeline/Dataset_quality_pipeline/data/cvat_xmls/3_annotations.xml"
+    }
+  ],
+  "summary": {
+    "total_tasks": 3,
+    "total_zip_size_mb": 2.09,
+    "subdirectories_processed": [
+      1,
+      2,
+      3
+    ],
+    "zip_files_used": [
+      "1.zip",
+      "2.zip",
+      "3.zip"
+    ],
+    "xml_files_imported": 3
+  }
+}
